@@ -7,33 +7,33 @@ import XCTest
 class ExpandSequence {
     let numbers = [2,3,2,4]
     var k = 0
-    var a:[Int]=[]
-    var b:[Int]=[]
+    var palindromeMountains:[Int]=[]
+    var shortenpalindromeMountains:[Int]=[]
     
     func expand() -> [Int] {
         for i in numbers{
             for j in 1..<i{
-                a.append(j)
+                palindromeMountains.append(j)
             }
             k = i
             while(k > 0){
-                a.append(k)
+                palindromeMountains.append(k)
                 k -= 1
             }
         }
-        var x = a.count
+        var x = palindromeMountains.count
         for i in 0..<x-1 {
-            var n = a[i]
-            var r = a[i+1]
+            var n = palindromeMountains[i]
+            var r = palindromeMountains[i+1]
             if (n == r){
                continue
             }
             else{
-                b.append(n)
+                shortenpalindromeMountains.append(n)
             }
         }
-        b.append(a[x-1])
-        return b // your code here
+        shortenpalindromeMountains.append(palindromeMountains[x-1])
+        return shortenpalindromeMountains // your code here
     }
 }
 

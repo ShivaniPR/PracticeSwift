@@ -9,8 +9,8 @@ let numbers = [1, 2, 3, 5, 9, 4, 3, 2, 1]
 var ans = 0
     
 func find() -> Int {
-   var count = 0
-            for i in 0..<9 {
+   let len = numbers.count - 1
+            for i in 0..<len {
                 var n = numbers[i]
                 var r = numbers[i+1]
                 if ( n > r){

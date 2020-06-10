@@ -8,8 +8,9 @@ class PeakCounting {
     let numbers = [1, 2, 3, 2, 1, 3, 5, 2, 3, 1]
     
     func count() -> Int {
+        let len = numbers.count - 1
         var count = 0
-        for i in 1..<9 {
+        for i in 1..<len{
             var n = numbers[i]
             var l = numbers[i-1]
             var r = numbers[i+1]

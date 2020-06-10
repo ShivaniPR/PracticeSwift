@@ -11,6 +11,7 @@ class Multiple {
             var ans = 0
             var count = 0
             var n = num[0]
+            let len = numbers.count
             for i in 1...30{
                 n = n * i
                 count = 0
@@ -18,7 +19,7 @@ class Multiple {
                     if n%j == 0{
                         count += 1
                     }
-                    if count == 5{
+                    if count == len{
                         ans = n
                         break
                     }

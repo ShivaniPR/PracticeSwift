@@ -7,7 +7,6 @@ import XCTest
 
 class CandyJar {
     let numberOfCandies: Int!
-    var number = 0
     init(numberOfCandies: Int) {
         self.numberOfCandies = numberOfCandies
     }
@@ -15,6 +14,7 @@ class CandyJar {
     func canWin() -> Bool {
         var candies = numberOfCandies!
         var count = 0
+        var number = 0
         while( candies > 0){
             number = Int.random(in: 1 ... 3 )
             candies = candies - number
